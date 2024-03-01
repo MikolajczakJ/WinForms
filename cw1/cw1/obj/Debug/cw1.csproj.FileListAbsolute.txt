@@ -1,0 +1,7 @@
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\cw1\cw1\bin\Debug\cw1.exe.config
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\cw1\cw1\bin\Debug\cw1.exe
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\cw1\cw1\bin\Debug\cw1.pdb
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\cw1\cw1\obj\Debug\cw1.csproj.AssemblyReference.cache
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\cw1\cw1\obj\Debug\cw1.csproj.CoreCompileInputs.cache
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\cw1\cw1\obj\Debug\cw1.exe
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\cw1\cw1\obj\Debug\cw1.pdb
