@@ -166,6 +166,7 @@
             this.zaznaczWszystkoToolStripMenuItem.Name = "zaznaczWszystkoToolStripMenuItem";
             this.zaznaczWszystkoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.zaznaczWszystkoToolStripMenuItem.Text = "Zaznacz wszystko";
+            this.zaznaczWszystkoToolStripMenuItem.Click += new System.EventHandler(this.zaznaczWszystkoToolStripMenuItem_Click);
             // 
             // widokToolStripMenuItem
             // 

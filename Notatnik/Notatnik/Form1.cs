@@ -26,28 +26,39 @@ namespace Notatnik
         private void otwórzToolStripMenuItem_Click(object sender, EventArgs e)
         {
             List<string> list = new List<string>();
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            try
             {
-                using (StreamReader sr = new StreamReader(openFileDialog1.FileName))
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    string wiersz;
-                    while ((wiersz = sr.ReadLine()) != null)
+                    using (StreamReader sr = new StreamReader(openFileDialog1.FileName))
                     {
-                        list.Add(wiersz);
+                        string wiersz;
+                        while ((wiersz = sr.ReadLine()) != null)
+                        {
+                            list.Add(wiersz);
+                        }
+                        textBox1.Lines = list.ToArray();
+
+                        //textBox1.Text = sr.ReadToEnd();
+
                     }
-                    textBox1.Lines = list.ToArray();
-
-                    //textBox1.Text = sr.ReadToEnd();
-
                 }
+            }
+            catch (Exception info)
+            {
+                MessageBox.Show($"Błąd odczytu pliku {info.Message}");
             }
         }
 
         private void zapiszJakoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string nazwaPliku = openFileDialog1.FileName;
+            if (nazwaPliku.Length > 0) saveFileDialog1.FileName = nazwaPliku;
+            
             string[] tekst = textBox1.Lines;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                nazwaPliku = saveFileDialog1.FileName;
                 using (StreamWriter sw = new StreamWriter(saveFileDialog1.FileName))
                 {
                     foreach (var item in tekst)
@@ -101,6 +112,12 @@ namespace Notatnik
 
         private void usuńToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            textBox1.SelectedText = "";
+        }
+
+        private void zaznaczWszystkoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.SelectAll();
         }
     }
 }
