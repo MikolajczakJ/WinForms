@@ -7,11 +7,15 @@
       "RelativeMoniker": "D:0:0:{8F33CE6F-4BB9-44DB-871C-70B998932BA8}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F33CE6F-4BB9-44DB-871C-70B998932BA8}|ToDoList\\ToDoList.csproj|c:\\users\\jakub\\onedrive\\pulpit\\studia\\sem vi\\forms\\winforms\\todolist\\todolist\\todoentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8F33CE6F-4BB9-44DB-871C-70B998932BA8}|ToDoList\\ToDoList.csproj|C:\\Users\\jakub\\OneDrive\\Pulpit\\Studia\\SEM VI\\Forms\\WinForms\\ToDoList\\todolist\\todoentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8F33CE6F-4BB9-44DB-871C-70B998932BA8}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\todoentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F33CE6F-4BB9-44DB-871C-70B998932BA8}|ToDoList\\ToDoList.csproj|c:\\users\\jakub\\onedrive\\pulpit\\studia\\sem vi\\forms\\winforms\\todolist\\todolist\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8F33CE6F-4BB9-44DB-871C-70B998932BA8}|ToDoList\\ToDoList.csproj|c:\\users\\jakub\\onedrive\\pulpit\\studia\\sem vi\\forms\\winforms\\todolist\\todolist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F33CE6F-4BB9-44DB-871C-70B998932BA8}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F33CE6F-4BB9-44DB-871C-70B998932BA8}|ToDoList\\ToDoList.csproj|C:\\Users\\jakub\\OneDrive\\Pulpit\\Studia\\SEM VI\\Forms\\WinForms\\ToDoList\\todolist\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8F33CE6F-4BB9-44DB-871C-70B998932BA8}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -44,14 +48,14 @@
               "RelativeDocumentMoniker": "ToDoList\\Form1.cs",
               "ToolTip": "C:\\Users\\jakub\\OneDrive\\Pulpit\\Studia\\SEM VI\\Forms\\WinForms\\ToDoList\\ToDoList\\Form1.cs",
               "RelativeToolTip": "ToDoList\\Form1.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAjwA4AAAAFAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAiwBUAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-23T13:45:47.35Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Projekt]",
               "DocumentMoniker": "C:\\Users\\jakub\\OneDrive\\Pulpit\\Studia\\SEM VI\\Forms\\WinForms\\ToDoList\\ToDoList\\Form1.cs",
               "RelativeDocumentMoniker": "ToDoList\\Form1.cs",
@@ -60,6 +64,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-23T13:43:52.928Z",
               "EditorCaption": " [Projekt]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jakub\\OneDrive\\Pulpit\\Studia\\SEM VI\\Forms\\WinForms\\ToDoList\\ToDoList\\Program.cs",
+              "RelativeDocumentMoniker": "ToDoList\\Program.cs",
+              "ToolTip": "C:\\Users\\jakub\\OneDrive\\Pulpit\\Studia\\SEM VI\\Forms\\WinForms\\ToDoList\\ToDoList\\Program.cs",
+              "RelativeToolTip": "ToDoList\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T12:14:19.668Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
