@@ -1,0 +1,10 @@
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\Firma\Firma\bin\Debug\Firma.exe.config
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\Firma\Firma\bin\Debug\Firma.exe
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\Firma\Firma\bin\Debug\Firma.pdb
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\Firma\Firma\obj\Debug\Firma.csproj.AssemblyReference.cache
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\Firma\Firma\obj\Debug\Firma.Form1.resources
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\Firma\Firma\obj\Debug\Firma.Properties.Resources.resources
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\Firma\Firma\obj\Debug\Firma.csproj.GenerateResource.cache
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\Firma\Firma\obj\Debug\Firma.csproj.CoreCompileInputs.cache
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\Firma\Firma\obj\Debug\Firma.exe
+C:\Users\jakub\OneDrive\Pulpit\Studia\SEM VI\Forms\WinForms\Firma\Firma\obj\Debug\Firma.pdb
