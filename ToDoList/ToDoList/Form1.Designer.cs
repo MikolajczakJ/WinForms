@@ -41,6 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.titleText = new System.Windows.Forms.TextBox();
+            this.SaveList = new System.Windows.Forms.Button();
+            this.LoadList = new System.Windows.Forms.Button();
             this.entriesSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -62,6 +64,8 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.LoadList);
+            this.splitContainer1.Panel2.Controls.Add(this.SaveList);
             this.splitContainer1.Panel2.Controls.Add(this.NewButton);
             this.splitContainer1.Panel2.Controls.Add(this.deleteButton);
             this.splitContainer1.Panel2.Controls.Add(this.descriptionText);
@@ -183,6 +187,28 @@
             this.titleText.Size = new System.Drawing.Size(200, 20);
             this.titleText.TabIndex = 0;
             // 
+            // SaveList
+            // 
+            this.SaveList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveList.Location = new System.Drawing.Point(318, 3);
+            this.SaveList.Name = "SaveList";
+            this.SaveList.Size = new System.Drawing.Size(75, 23);
+            this.SaveList.TabIndex = 8;
+            this.SaveList.Text = "Zapisz listę";
+            this.SaveList.UseVisualStyleBackColor = true;
+            this.SaveList.Click += new System.EventHandler(this.SaveList_Click);
+            // 
+            // LoadList
+            // 
+            this.LoadList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadList.Location = new System.Drawing.Point(318, 32);
+            this.LoadList.Name = "LoadList";
+            this.LoadList.Size = new System.Drawing.Size(75, 23);
+            this.LoadList.TabIndex = 9;
+            this.LoadList.Text = "Wczytaj liste";
+            this.LoadList.UseVisualStyleBackColor = true;
+            this.LoadList.Click += new System.EventHandler(this.LoadList_Click);
+            // 
             // entriesSource
             // 
             this.entriesSource.DataSource = typeof(ToDoList.ToDoEntry);
@@ -221,6 +247,8 @@
         private System.Windows.Forms.TextBox descriptionText;
         private System.Windows.Forms.Button NewButton;
         private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button SaveList;
+        private System.Windows.Forms.Button LoadList;
     }
 }
 

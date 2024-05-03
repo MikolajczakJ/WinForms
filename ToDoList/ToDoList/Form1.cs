@@ -5,8 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ToDoList
 {
@@ -14,10 +16,12 @@ namespace ToDoList
     public partial class Form1 : Form
     {
         private BindingList<ToDoEntry> entries = new BindingList<ToDoEntry>();
+        private SaveFileDialog saveFileDialog = new SaveFileDialog();
+        private OpenFileDialog openFileDialog = new OpenFileDialog();
         public Form1()
         {
             InitializeComponent();
-            titleText.DataBindings.Add("Text",entriesSource,"Title",true,
+            titleText.DataBindings.Add("Text", entriesSource, "Title", true,
                 DataSourceUpdateMode.OnPropertyChanged);
             dueDatePicker.DataBindings.Add("Value", entriesSource, "DueTime", true,
                 DataSourceUpdateMode.OnPropertyChanged);
@@ -47,7 +51,7 @@ namespace ToDoList
                     RemoveListViewItem(e.NewIndex);
                     break;
                 case ListChangedType.ItemChanged:
-                    UpdateListViewItem(e.NewIndex);
+                    UpdateListViewItem((e.NewIndex));
                     break;
                 default:
                     break;
@@ -64,7 +68,7 @@ namespace ToDoList
             ListViewItem item = entriesListView.Items[itemIndex];
             ToDoEntry entry = entries[itemIndex];
             item.SubItems[0].Text = entry.Title;
-            item.SubItems[1].Text =entry.DueTime.ToShortDateString();
+            item.SubItems[1].Text = entry.DueTime.ToShortDateString();
         }
         private void RemoveListViewItem(int deletedItemIndex)
         {
@@ -93,5 +97,46 @@ namespace ToDoList
                 entriesSource.Position = entryIndex;
             }
         }
+
+        private void SaveList_Click(object sender, EventArgs e)
+        {
+            saveFileDialog.DefaultExt = "xml";
+            saveFileDialog.Filter = "XML files (*.xml)|*.xml";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var toSave = new List<ToDoEntry>(entries);
+                using (var writer = new StreamWriter(saveFileDialog.FileName))
+                {
+                    var serializer = new XmlSerializer(typeof(List<ToDoEntry>));
+                    serializer.Serialize(writer, toSave);
+                }
+            }
+        }
+
+        private void LoadList_Click(object sender, EventArgs e)
+        {
+            openFileDialog.Filter = "XML Files (*.xml)|*.xml";
+            openFileDialog.Title = "Open ToDo List";
+
+            var loadedList = new BindingList<ToDoEntry>();
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (var reader = new StreamReader(openFileDialog.FileName))
+                {
+                    var serializer = new XmlSerializer(typeof(List<ToDoEntry>));
+                    var listFromXml = (List<ToDoEntry>)serializer.Deserialize(reader);
+                    foreach (var item in listFromXml)
+                    {
+                        ToDoEntry newEntry = (ToDoEntry)entriesSource.AddNew();
+                        newEntry.Title = item.Title;
+                        newEntry.DueTime = item.DueTime;
+                        newEntry.Description = item.Description;
+                        entriesSource.ResetCurrentItem();
+                    }
+                }
+            }
+        }
     }
+
 }
