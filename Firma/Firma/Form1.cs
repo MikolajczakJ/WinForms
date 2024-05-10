@@ -43,10 +43,10 @@ namespace Firma
             Pracownik nowyPracownik = new Pracownik
             {
                 Id = noweId,
-                Imie = "Piotr",
-                Nazwisko = "Adamek",
-                Email = "p.a@wp.pl",
-                Telefon = "200-300-400"
+                Imie = textBoxImie.Text,
+                Nazwisko = textBoxNazwisko.Text,
+                Email = textBoxEmail.Text,
+                Telefon = textBoxTelefon.Text
             };
             listaPracownikow.InsertOnSubmit(nowyPracownik);
             bazaDanychFirma.SubmitChanges();
@@ -71,11 +71,43 @@ namespace Firma
         private void dataGridView1_Click(object sender, EventArgs e)
         {
             int wiersz = dataGridView1.CurrentRow.Index;
-
             textBoxNazwisko.Text = dataGridView1.Rows[wiersz].Cells[1].Value.ToString();
             textBoxImie.Text = dataGridView1.Rows[wiersz].Cells[2].Value.ToString();
             textBoxTelefon.Text = dataGridView1.Rows[wiersz].Cells[3].Value.ToString();
             textBoxEmail.Text = dataGridView1.Rows[wiersz].Cells[4].Value.ToString();
+            int idPracownik =
+                Convert.ToInt32(dataGridView1.Rows[wiersz].Cells[0].Value.ToString());
+            var ls = from FakturySprzedazy in listaFaktur
+                     where (FakturySprzedazy.Id == idPracownik)
+                     select new
+                     {
+                         FakturySprzedazy.Id,
+                         FakturySprzedazy.Numer,
+                         FakturySprzedazy.Netto,
+                         FakturySprzedazy.Vat,
+                         FakturySprzedazy.Data,
+                         FakturySprzedazy.Zaplacono
+                     };
+            dataGridView2.DataSource = ls;
+        }
+
+        private void edycjaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int wiersz = Convert.ToInt32(dataGridView1.CurrentRow.Index);
+            int idPracownik =
+                Convert.ToInt32(dataGridView1.Rows[wiersz].Cells[0].Value.ToString());
+            foreach (Pracownik pracownik in listaPracownikow)
+            {
+                if (pracownik.Id == idPracownik)
+                {
+                    pracownik.Imie = textBoxImie.Text;
+                    pracownik.Nazwisko = textBoxNazwisko.Text;
+                    pracownik.Email = textBoxEmail.Text;
+                    pracownik.Telefon = textBoxTelefon.Text;
+                }
+            }
+            bazaDanychFirma.SubmitChanges();
+            listaToolStripMenuItem_Click(this, null);
         }
     }
 }

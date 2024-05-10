@@ -32,6 +32,14 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxTelefon = new System.Windows.Forms.TextBox();
+            this.textBoxNazwisko = new System.Windows.Forms.TextBox();
+            this.textBoxImie = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sprzedażToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pracownikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,14 +47,6 @@
             this.nowyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.edycjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usunięcieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxImie = new System.Windows.Forms.TextBox();
-            this.textBoxNazwisko = new System.Windows.Forms.TextBox();
-            this.textBoxTelefon = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -121,6 +121,70 @@
             this.dataGridView2.Size = new System.Drawing.Size(387, 251);
             this.dataGridView2.TabIndex = 0;
             // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(196, 32);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEmail.TabIndex = 8;
+            // 
+            // textBoxTelefon
+            // 
+            this.textBoxTelefon.Location = new System.Drawing.Point(196, 79);
+            this.textBoxTelefon.Name = "textBoxTelefon";
+            this.textBoxTelefon.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTelefon.TabIndex = 7;
+            // 
+            // textBoxNazwisko
+            // 
+            this.textBoxNazwisko.Location = new System.Drawing.Point(12, 79);
+            this.textBoxNazwisko.Name = "textBoxNazwisko";
+            this.textBoxNazwisko.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNazwisko.TabIndex = 6;
+            // 
+            // textBoxImie
+            // 
+            this.textBoxImie.Location = new System.Drawing.Point(12, 32);
+            this.textBoxImie.Name = "textBoxImie";
+            this.textBoxImie.Size = new System.Drawing.Size(100, 20);
+            this.textBoxImie.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(193, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Telefon";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(193, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Email";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Nazwisko";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(26, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Imie";
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -168,6 +232,7 @@
             this.edycjaToolStripMenuItem.Name = "edycjaToolStripMenuItem";
             this.edycjaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.edycjaToolStripMenuItem.Text = "Edycja";
+            this.edycjaToolStripMenuItem.Click += new System.EventHandler(this.edycjaToolStripMenuItem_Click);
             // 
             // usunięcieToolStripMenuItem
             // 
@@ -175,70 +240,6 @@
             this.usunięcieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usunięcieToolStripMenuItem.Text = "Usunięcie";
             this.usunięcieToolStripMenuItem.Click += new System.EventHandler(this.usunięcieToolStripMenuItem_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Imie";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nazwisko";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(193, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Email";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(193, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Telefon";
-            // 
-            // textBoxImie
-            // 
-            this.textBoxImie.Location = new System.Drawing.Point(12, 32);
-            this.textBoxImie.Name = "textBoxImie";
-            this.textBoxImie.Size = new System.Drawing.Size(100, 20);
-            this.textBoxImie.TabIndex = 5;
-            // 
-            // textBoxNazwisko
-            // 
-            this.textBoxNazwisko.Location = new System.Drawing.Point(12, 79);
-            this.textBoxNazwisko.Name = "textBoxNazwisko";
-            this.textBoxNazwisko.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNazwisko.TabIndex = 6;
-            // 
-            // textBoxTelefon
-            // 
-            this.textBoxTelefon.Location = new System.Drawing.Point(196, 79);
-            this.textBoxTelefon.Name = "textBoxTelefon";
-            this.textBoxTelefon.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTelefon.TabIndex = 7;
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Location = new System.Drawing.Point(196, 32);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(100, 20);
-            this.textBoxEmail.TabIndex = 8;
             // 
             // Form1
             // 
